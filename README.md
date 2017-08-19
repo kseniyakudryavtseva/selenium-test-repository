@@ -1,1 +1,1 @@
-# selenium-test-repository
+# Test repository
