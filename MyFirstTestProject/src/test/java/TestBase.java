@@ -23,6 +23,15 @@ public class TestBase {
 		  }
 		}
 	
+	boolean areElementsPresent(By locator) {
+		  return driver.findElements(locator).size() > 0;
+		}
+	
+	boolean isOneElementPresent(By locator) {
+		  return driver.findElements(locator).size() == 1;
+		}
+	
+	
 	@Before
 	public void start() {
 		driver = new ChromeDriver();
