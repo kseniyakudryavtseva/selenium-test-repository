@@ -27,9 +27,6 @@ public class TestBase {
 		  return driver.findElements(locator).size() > 0;
 		}
 	
-	boolean isOneElementPresent(By locator) {
-		  return driver.findElements(locator).size() == 1;
-		}
 	
 	
 	@Before
