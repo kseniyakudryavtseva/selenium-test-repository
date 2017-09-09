@@ -12,7 +12,7 @@ public class ShoppingCart extends TestBase {
 	public void test01() throws InterruptedException {
 		driver.get("http://localhost/litecart/en/");
 		
-		for (int i=0;i<3;i++)
+		for (int i =0; i < 3; i++)
 		{
 			driver.findElement(By.cssSelector("#box-most-popular li:first-child")).click();
 			int count = Integer.parseInt(driver.findElement(By.cssSelector("div#cart span.quantity")).getText());
@@ -34,7 +34,7 @@ public class ShoppingCart extends TestBase {
 		List <WebElement> all_products = driver.findElements(By.cssSelector("table.dataTable tr"));
 		for (int i=1;i<all_products.size()-4;i++)
 			{
-				if (all_products.size()==6)
+				if (all_products.size() == 6)
 				{
 					driver.findElement(By.cssSelector("button[name='remove_cart_item'")).click();
 					wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div#checkout-cart-wrapper em")));
